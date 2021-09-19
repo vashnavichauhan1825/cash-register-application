@@ -35,6 +35,7 @@ btnAction.addEventListener("click", () => {
         }
         updateTable(returnArr);
         returnDiv.classList.remove("hidden");
+        resultText.innerHTML = "";
       } else {
         returnDiv.classList.add("hidden");
         resultText.innerText = `Customer still need's to pay ${
@@ -44,8 +45,7 @@ btnAction.addEventListener("click", () => {
     } else {
       resultText.innerHTML = "Enter Valid Integer for Bill and Customer amount";
     }
-  }
-});
+}});
 
 function isaNummber(checkElement) {
   if (checkElement > 0 && Number.isInteger(checkElement)) {
